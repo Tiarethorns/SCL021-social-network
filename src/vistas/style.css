@@ -39,9 +39,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  background-color: #cab68523;
-  box-shadow: 10px 10px 10px #c0a87c;
-  border-color: #c0a87c;
+  background-color: #e0d49652;
+  box-shadow: rgba(0, 0, 0, 0.25);
+  /*box-shadow: 10px 10px 10px #c0a87c;
+  border-color: #c0a87c;*/
 }
 .fondoinput {
   background-color: #c0a87c;
@@ -54,9 +55,15 @@ body {
 }
 .uBox {
   background-color: #c0a87c;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
 }
 .psBox {
   background-color: #c0a87c;
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
 }
 /*.granos {
   max-width: 1280px;
@@ -72,12 +79,6 @@ body {
   margin-right: auto;
   justify-content: center;
   margin-top: 50px;
-}
-.btngoogle {
-  text-decoration: none;
-}
-.a {
-  text-decoration: none;
 }
 .body {
   background-color: #ffffb0;
@@ -114,6 +115,11 @@ body {
   margin-left: 35%;
   border-radius: 5px;
   width: 25%;
+  color: lemonchiffon;
+  font-size: x-large;
+}
+.btn-log a {
+  text-decoration: none;
   color: lemonchiffon;
   font-size: x-large;
 }

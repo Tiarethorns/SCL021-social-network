@@ -49,7 +49,8 @@ export const login = () => {
 
   const btnLog = document.createElement("button");
   btnLog.className = "btn-log";
-  btnLog.textContent = "Log In";
+  btnLog.innerHTML = "<a href='#muro'>Log In</a>";
+  /* btnLog.textContent = "Log In";*/
   logBox.appendChild(btnLog);
 
   const psText = document.createElement("p");
