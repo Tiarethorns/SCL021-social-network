@@ -2,23 +2,70 @@
 
 ## Índice
 
-- [1. Definición del producto](#1-Definición-del-producto)
+- [1. Ideando el producto](#1-ideando-el-producto)
 - [2. Historias del usuario](#2-historias-del-usuario)
 
-## 1. Definición del producto
+## 1. Ideando el producto
 
-Es una red social que busca conectar personas con interés por el mundo del café, estará orientada a la obtención de productos (market), como hacer las preparaciones correspondientes(muro usuarios) y mención de cafeterías dentro del radio local(suggestions).
+El objetivo es crear una comunidad de personas con interés por el mundo del café, y en vista de esto se piensa en las siguientes opciones:
+
+![latte maquina de esspresso](https://user-images.githubusercontent.com/106929329/186951130-41520cd7-704a-48a0-ad5f-8c0a282c2d7e.jpeg)
+
+### Market
+Podría estar orientada a la obtención de productos, permitiendo a los usuarios interactuar con el fin de generar un flujo de compra y venta de elementos relacionados al consumo y preparación de esta exquisita bebida :D.
+### Compartir conocimientos sobre preparaciones y tipos de café
+Busca conectar a las personas poniendo el foco en compartir recetas y diversas preparaciones que involucren el café, cada usuario se encarga de crear contenido y despegarlo en la app de la forma en que estime pertinente.
+### Suggestions
+Espacio en el cual los usuarios interactúan entregando información sobre la experiencia vivida en cafeterías dentro del radio local, pueden hacer una breve descripción del lugar, como estuvo la atención, calidad del producto y finalmente evaluar y sugerir, calificar con estrellas.
+
+De éstas opciones se decidió trabajar con la idea de *Compartir conocimientos sobre preparaciones y tipos de café* ya que no se ha logrado captar en espacios virtuales una red social que se dedique especialmente a cubir ésta necesidad. 
+
+El nombre de la Red será Kawa, ya que se cree que esta infusión fue llamada de ésta manera por los primeros pueblos árabes que la descubrieron y además es una palabra corta y fácil de recordar.
 
 ## 2. Historias del usuario
 
-### Market
+1-"Quiero iniciar y cerrar sesión y crearme una cuenta en la aplicación"
 
-Es el canal de ventas de esta red social, donde las personas interactúan para la compra y venta de elementos relacionados al consumo y preparación de esta exquisita bebida :D.
+*Criterios de aceptación*
+-Iniciar sesion con google 
+-Crear cuenta en pocos pasos.
+-Botones y/o enlaces para iniciar sesión, crear cuenta, google.
 
-### Muro
+*Definición de terminado*
+-Diseñar prototipo con figma (iniciar sesión, iniciar con google). 
+-Crear cuenta ingresando correo electrónico válido y creando una clave.
 
-Es el espacio personal en el que cada usuario se encarga de crear contenido y despegarlo en la app de la forma en que estime conveniente según sus necesidades.
+2-"Quiero usar la app primordialmente en el celular"
 
-### Suggestions
+*Criterios de aceptación*
+-La red social debe ser Responsive
 
-Lugar en el cual los usuarios interactúan entregando información sobre la experiencia vivida en cafeterías dentro del radio local, pueden hacer una breve descripción del lugar, como estuvo la atención, calidad del producto y finalmente evaluar y sugerir.
+*Definición de terminado*
+-Trabajar con técnica de movile first y luego adaptar a otras pantallas ya que facilita el proceso
+
+3-"Quiero compartir información sobre preparaciones y tipos de café"
+
+*Criterios de aceptación*
+-Postear mensajes y que se vean en la página principal.
+
+*Definición de terminado*
+-Los post deben guardarse en una base de datos para luego traerla y distribuirla según corresponda.
+
+3-"Quiero recibir información sobre preparaciones y tipos de café"
+
+*Criterios de aceptación*
+-Leer mensajes y que se vean en la página principal.
+
+*Definición de terminado*
+-Los post deben guardarse en una base de datos para luego traerla y distribuirla según corresponda.
+
+
+
+
+
+
+
+
+
+
+
