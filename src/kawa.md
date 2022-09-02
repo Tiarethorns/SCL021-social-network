@@ -4,6 +4,7 @@
 
 - [1. Ideando el producto](#1-ideando-el-producto)
 - [2. Historias del usuario](#2-historias-del-usuario)
+- [3. Prototipo](#3-prototipo)
 
 ## 1. Ideando el producto
 
@@ -19,8 +20,6 @@ Busca conectar a las personas poniendo el foco en compartir recetas y diversas p
 Espacio en el cual los usuarios interactúan entregando información sobre la experiencia vivida en cafeterías dentro del radio local, pueden hacer una breve descripción del lugar, como estuvo la atención, calidad del producto y finalmente evaluar y sugerir, calificar con estrellas.
 
 De éstas opciones se decidió trabajar con la idea de *Compartir conocimientos sobre preparaciones y tipos de café* ya que no se ha logrado captar en espacios virtuales una red social que se dedique especialmente a cubir ésta necesidad. 
-
-El nombre de la Red será Kawa, ya que se cree que esta infusión fue llamada de ésta manera por los primeros pueblos árabes que la descubrieron y además es una palabra corta y fácil de recordar.
 
 ## 2. Historias del usuario
 
@@ -51,14 +50,9 @@ El nombre de la Red será Kawa, ya que se cree que esta infusión fue llamada de
 *Definición de terminado*
 -Los post deben guardarse en una base de datos para luego traerla y distribuirla según corresponda.
 
-3-"Quiero recibir información sobre preparaciones y tipos de café"
+## 3. Prototipo
 
-*Criterios de aceptación*
--Leer mensajes y que se vean en la página principal.
-
-*Definición de terminado*
--Los post deben guardarse en una base de datos para luego traerla y distribuirla según corresponda.
-
+![CoffeGramfigma](https://user-images.githubusercontent.com/106929329/188193599-c876476e-dec9-45d3-856c-c0d2e1f9199f.png)
 
 
 
