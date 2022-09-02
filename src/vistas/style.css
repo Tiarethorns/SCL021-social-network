@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffb0;
+}
+
+/* Utilidades */
+.container-login {
+  background-color: #ffffb0;
+  height: 100vh;
+}
+.cafeDiv {
+  background-image: url("../img/granoa.PNG");
+  padding: 18%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 35%;
+}
+.logo {
+  display: flex;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logBox {
+  width: 90%;
+  height: 30%;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: #cab68523;
+  box-shadow: 10px 10px 10px #c0a87c;
+  border-color: #c0a87c;
+}
+.fondoinput {
+  background-color: #c0a87c;
+  height: 15%;
+  width: 80%;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.uBox {
+  background-color: #c0a87c;
+}
+.psBox {
+  background-color: #c0a87c;
+}
+/*.granos {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+.btngoogle {
+  background-color: #c0a87c;
+  height: 5%;
+  width: 80%;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 50px;
+}
+.btngoogle {
+  text-decoration: none;
+}
+.a {
+  text-decoration: none;
+}
+.body {
+  background-color: #ffffb0;
+}
+.align {
+  margin-left: 10%;
+  margin-bottom: 0%;
+  color: #8c4c17;
+  font-weight: 400;
+}
+.logText {
+  display: inline-table;
+  color: #8c4c17;
+  font-weight: 700;
+  margin-left: 6%;
+}
+.btngoogle {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5%;
+  align-items: center;
+}
+.btngoogle a {
+  text-decoration: none;
+  color: #ffffb0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.btn-log {
+  border: none;
+  height: 15%;
+  background-color: #c0a87c;
+  margin-top: 3%;
+  margin-left: 35%;
+  border-radius: 5px;
+  width: 25%;
+  color: lemonchiffon;
+  font-size: x-large;
+}
+.imgoGgle {
+  height: 30px;
+  width: 30px;
+}
