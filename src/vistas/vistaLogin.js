@@ -1,9 +1,10 @@
+import { loginWithGoogle } from "../lib/authService.js";
+import { onNavigate } from "../main.js";
+/*import { onAuthStateChanged } from "firebase/auth";*/
 export const login = () => {
-  const logearse = document.createElement("div");
+  const logearse = document.createElement("main");
 
   logearse.className = "container-login";
-  // logearse.textContent = "este es el login!";
-  //console.log(logearse);
 
   const logo = document.createElement("img");
   logo.src = "./img/logo.png";
@@ -12,11 +13,6 @@ export const login = () => {
 
   const logBox = document.createElement("div");
   logBox.className = "logBox";
-  /*logBox.style.border = "1px solid red";
-  logBox.style.width = "500px";
-  logBox.style.borderRadius = "5px";
-  logBox.style.display = "flex";*/
-
   logearse.appendChild(logBox);
 
   const userName = document.createElement("p");
@@ -49,24 +45,27 @@ export const login = () => {
 
   const btnLog = document.createElement("button");
   btnLog.className = "btn-log";
-  btnLog.innerHTML = "<a href='#muro'>Log In</a>";
+  btnLog.innerText = "Log In";
+  btnLog.addEventListener("click", () => {
+    onNavigate("/muro");
+  });
+
   /* btnLog.textContent = "Log In";*/
+
   logBox.appendChild(btnLog);
 
   const psText = document.createElement("p");
   psText.className = "logText";
   psText.innerHTML =
-    "¿Olvidaste tu contraseña? <a href='#muro'> Haz click aquí </a><br> <a href='#register'>Crea tu cuenta</a>";
+    "¿Olvidaste tu contraseña? <a href='#muro'> Haz click aquí </a> <br> <a href='#register'>Crea tu cuenta</a>";
   logBox.appendChild(psText);
-
-  /*const creacta = document.createElement("p");
-  creacta.className = "creacta";
-  creacta.textContent = "Crea tu cuenta";
-  logBox.appendChild(creacta);*/
 
   const btngoogle = document.createElement("div");
   btngoogle.className = "btngoogle";
-  btngoogle.innerHTML = "<a href='#muro'> Ingresa con tu cuenta de Google</a>";
+  btngoogle.innerHTML = "Ingresa con tu cuenta de Google";
+  btngoogle.addEventListener("click", () => {
+    loginWithGoogle();
+  });
   logearse.appendChild(btngoogle);
 
   const imgGgle = document.createElement("img");
@@ -74,13 +73,9 @@ export const login = () => {
   imgGgle.src = "./img/google.png";
   btngoogle.appendChild(imgGgle);
 
-  const cafeDiv = document.createElement("div");
+  const cafeDiv = document.createElement("footer");
   cafeDiv.className = "cafeDiv";
   logearse.appendChild(cafeDiv);
-  /*const granosCafe = document.createElement("img");
-  granosCafe.src = "./img/granoscafe.png";
-  granosCafe.className = "granos";
-  cafeDiv.appendChild(granosCafe);*/
 
   return logearse;
 };

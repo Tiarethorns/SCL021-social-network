@@ -1,18 +1,20 @@
-// Este es el punto de entrada de tu aplicacion
+import { routes } from "./router.js";
+//import { login } from "./vistas/vistaLogin.js";
+//import { muro } from "./vistas/vistaMuro.js";
+//import { register } from "./vistas/vistaRegister.js";
 
-import { myFunction } from "./lib/index.js";
-import { register } from "./vistas/vistaRegister.js";
-import { login } from "./vistas/vistaLogin.js";
-import { muro } from "./vistas/vistaMuro.js";
-myFunction();
+const rootDiv = document.getElementById("root");
+rootDiv.innerHTML = routes[window.location.pathname];
 
-//document.getElementById("root").append(register());
-document.getElementById("root").append(login());
+// method that takes and render section according to it
+const onNavigate = (pathname) => {
+  window.history.pushState({}, pathname, window.location.origin + pathname);
+  rootDiv.innerHTML = [pathname];
+};
 
-//document.getElementById("root").append(muro());
-window.addEventListener("hashchange", () => {
-  console.log(window.location.hash); //escoger ruta segun esta variable
-  //document.getElementById("root").innerHTML = "";
-  document.getElementById("root").replaceChildren(muro());
-  document.getElementById("root").replaceChildren(register());
-});
+// repeat for other routes also.
+window.onpopstate = () => {
+  rootDiv.innerHTML = routes[window.location.pathname];
+};
+
+export { onNavigate };

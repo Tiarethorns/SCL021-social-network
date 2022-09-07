@@ -166,6 +166,11 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  color: #8c4c17;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  background-color: #c0a87c;
+  height: 75%;
 }
 
 /**
@@ -174,7 +179,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +190,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
