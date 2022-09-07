@@ -1,5 +1,6 @@
 import { loginWithGoogle } from "../lib/authService.js";
 import { onNavigate } from "../main.js";
+import { register } from "./vistaRegister.js";
 /*import { onAuthStateChanged } from "firebase/auth";*/
 export const login = () => {
   const logearse = document.createElement("main");
@@ -57,8 +58,11 @@ export const login = () => {
   const psText = document.createElement("p");
   psText.className = "logText";
   psText.innerHTML =
-    "¿Olvidaste tu contraseña? <a href='#muro'> Haz click aquí </a> <br> <a href='#register'>Crea tu cuenta</a>";
+    "¿Olvidaste tu contraseña? <a href='#muro'> Haz click aquí </a> <br> <a id='link' href='#register'>Crea tu cuenta</a>";
   logBox.appendChild(psText);
+  logBox.querySelector("#link").addEventListener("click", () => {
+    onNavigate("/register");
+  });
 
   const btngoogle = document.createElement("div");
   btngoogle.className = "btngoogle";

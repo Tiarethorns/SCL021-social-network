@@ -4,6 +4,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
+import { onNavigate } from "../main.js";
 
 const provider = new GoogleAuthProvider();
 const loginWithGoogle = () => {
@@ -16,7 +17,7 @@ const loginWithGoogle = () => {
       const user = result.user;
       // ...
       console.log(user);
-      window.location.href = "#/muro";
+      onNavigate("muro");
     })
     .catch((error) => {
       // Handle Errors here.
