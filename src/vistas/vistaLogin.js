@@ -1,16 +1,16 @@
 import { loginWithGoogle } from "../lib/authService.js";
 import { onNavigate } from "../main.js";
-import { register } from "./vistaRegister.js";
+
 /*import { onAuthStateChanged } from "firebase/auth";*/
 export const login = () => {
-  const logearse = document.createElement("main");
+  const logearse = document.createElement("div");
 
   logearse.className = "container-login";
 
-  const logo = document.createElement("img");
+  /*const logo = document.createElement("img");
   logo.src = "./img/logo.png";
   logo.className = "logo";
-  logearse.appendChild(logo);
+  logearse.appendChild(logo);*/
 
   const logBox = document.createElement("div");
   logBox.className = "logBox";
@@ -38,7 +38,7 @@ export const login = () => {
   inputPassbox.className = "fondoinput";
   logBox.appendChild(inputPassbox);
 
-  const psBox = document.createElement("input"); //quiero que esto sea un input clave
+  const psBox = document.createElement("input");
   psBox.className = "psBox";
   psBox.type = "password";
   //psBox.style.border = "1px solid red";
@@ -56,12 +56,15 @@ export const login = () => {
   logBox.appendChild(btnLog);
 
   const psText = document.createElement("p");
-  psText.className = "logText";
+  psText.className = "align";
   psText.innerHTML =
-    "¿Olvidaste tu contraseña? <a href='#muro'> Haz click aquí </a> <br> <a id='link' href='#register'>Crea tu cuenta</a>";
+    "¿Olvidaste tu contraseña? <a id = 'con'> Haz click aquí </a> <br> <a id='link' href='#register'>Crea tu cuenta</a>";
   logBox.appendChild(psText);
   logBox.querySelector("#link").addEventListener("click", () => {
     onNavigate("/register");
+  });
+  logBox.querySelector("#con").addEventListener("click", () => {
+    onNavigate("/contrasena");
   });
 
   const btngoogle = document.createElement("div");
@@ -77,9 +80,9 @@ export const login = () => {
   imgGgle.src = "./img/google.png";
   btngoogle.appendChild(imgGgle);
 
-  const cafeDiv = document.createElement("footer");
+  /* const cafeDiv = document.createElement("footer");
   cafeDiv.className = "cafeDiv";
-  logearse.appendChild(cafeDiv);
+  logearse.appendChild(cafeDiv);*/
 
   return logearse;
 };

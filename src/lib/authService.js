@@ -1,10 +1,10 @@
 import { auth } from "./firebaseConfig.js";
-
+import { onNavigate } from "../main.js";
 import {
   signInWithPopup,
   GoogleAuthProvider,
+  createUserWithEmailAndPassword, // crear funcion y luego pegar funcion desde firebase
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
-import { onNavigate } from "../main.js";
 
 const provider = new GoogleAuthProvider();
 const loginWithGoogle = () => {
@@ -17,7 +17,7 @@ const loginWithGoogle = () => {
       const user = result.user;
       // ...
       console.log(user);
-      onNavigate("muro");
+      onNavigate("/muro");
     })
     .catch((error) => {
       // Handle Errors here.
@@ -31,16 +31,3 @@ const loginWithGoogle = () => {
     });
 };
 export { loginWithGoogle };
-
-/*onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    // ...
-  } else {
-    // User is signed out
-    // ...
-  }
-});
-export { onAuthStateChanged };*/

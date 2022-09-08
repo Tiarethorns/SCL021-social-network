@@ -1,10 +1,10 @@
 export const register = () => {
   const registro = document.createElement("div");
 
-  const logo = document.createElement("img");
+  /*const logo = document.createElement("img");
   logo.src = "./img/logo.png";
   logo.className = "logo";
-  registro.appendChild(logo);
+  registro.appendChild(logo);*/
 
   const Box = document.createElement("div");
   Box.className = "Box";
@@ -15,10 +15,10 @@ export const register = () => {
     "Deja los datos solicitados a continuación y ya podrás formar parte de COFFEGRAM ";
   Box.appendChild(registerText);
 
-  const imgRegister = document.createElement("img");
+  /*const imgRegister = document.createElement("img");
   imgRegister.className = "imgregister";
   imgRegister.src = "./img/register.png";
-  Box.appendChild(imgRegister);
+  Box.appendChild(imgRegister);*/
 
   const username = document.createElement("input");
   username.className = "username";
@@ -42,9 +42,9 @@ export const register = () => {
   btnRegister.className = "btnRegister";
   Box.appendChild(btnRegister);
 
-  const cafeDiv = document.createElement("div");
+  /*const cafeDiv = document.createElement("div");
   cafeDiv.className = "cafeDiv";
-  registro.appendChild(cafeDiv);
+  registro.appendChild(cafeDiv);*/
 
   return registro;
 };

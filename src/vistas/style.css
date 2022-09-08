@@ -11,42 +11,30 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffb0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url("../img/templateResponsive.png") no-repeat center center fixed;
+  background-size: 100% 100%;
 }
 
 /* Utilidades */
 .container-login {
-  background-color: #ffffb0;
-  height: 100vh;
+  margin-top: 85%;
 }
-.cafeDiv {
-  background-image: url("../img/granoa.PNG");
-  padding: 22%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 35%;
-}
-.logo {
-  display: flex;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.logBox {
-  width: 90%;
-  height: 30%;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  background-color: #e0d49652;
-  box-shadow: rgba(0, 0, 0, 0.25);
 
-  /*box-shadow: 10px 10px 10px #c0a87c;
-  border-color: #c0a87c;*/
+logBox {
+  margin-top: 85%;
+  color: #8c4c17;
+  width: 90%;
+  height: 40%;
+  border-radius: 5px;
+  margin-left: 5%;
+  /* background-color: #e0d49652; */
+  box-shadow: rgba(0, 0, 0, 0.25);
+  display: inline-grid;
 }
 .fondoinput {
-  background-color: #c0a87c;
+  /*background-color: #c0a87c;*/
   height: 15%;
   width: 80%;
   border-radius: 5px;
@@ -55,22 +43,18 @@ body {
   justify-content: center;
 }
 .uBox {
-  background-color: #c0a87c;
+  /* background-color: #c0a87c;*/
   border-radius: 5px;
   width: 100%;
   height: 100%;
 }
 .psBox {
-  background-color: #c0a87c;
-  border-radius: 5%;
+  /*background-color: #c0a87c;*/
+  border-radius: 5px;
   width: 100%;
   height: 100%;
 }
-/*.granos {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-}*/
+
 .btngoogle {
   background-color: #c0a87c;
   height: 5%;
@@ -80,10 +64,11 @@ body {
   margin-right: auto;
   justify-content: center;
   margin-top: 50px;
+  color: lemonchiffon;
 }
-.body {
+/*.body {
   background-color: #ffffb0;
-}
+}*/
 .align {
   margin-left: 10%;
   margin-bottom: 0%;
@@ -109,7 +94,6 @@ body {
   font-weight: 500;
 }
 .btn-log {
-  border: none;
   height: 15%;
   background-color: #c0a87c;
   margin-top: 3%;
@@ -117,7 +101,6 @@ body {
   border-radius: 5px;
   width: 25%;
   color: lemonchiffon;
-  font-size: x-large;
 }
 .btn-log a {
   text-decoration: none;
@@ -129,12 +112,13 @@ body {
   width: 30px;
 }
 .Box {
+  margin-top: 85%;
   color: #8c4c17;
   width: 90%;
   height: 40%;
   border-radius: 5px;
   margin-left: 5%;
-  background-color: #e0d49652;
+  /*background-color: #e0d49652;*/
   box-shadow: rgba(0, 0, 0, 0.25);
   display: inline-grid;
 }
@@ -147,8 +131,17 @@ body {
   font-weight: bold;
 }
 .btnRegister {
-  height: 25%;
-  width: 25%;
+  /*width: 28%;
   margin-left: 35%;
-  margin-top: 10%;
+      height: 15%;*/
+  background-color: #c0a87c;
+  margin-top: 3%;
+  margin-left: 35%;
+  border-radius: 5px;
+  width: 25%;
+  color: lemonchiffon;
+}
+a {
+  text-decoration: none;
+  color: #8c4c17;
 }

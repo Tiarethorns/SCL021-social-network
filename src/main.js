@@ -1,7 +1,4 @@
 import { routes } from "./router.js";
-//import { login } from "./vistas/vistaLogin.js";
-//import { muro } from "./vistas/vistaMuro.js";
-//import { register } from "./vistas/vistaRegister.js";
 
 export const rootDiv = document.getElementById("root");
 rootDiv.appendChild(routes[window.location.pathname]);
