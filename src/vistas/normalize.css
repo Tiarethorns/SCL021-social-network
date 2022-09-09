@@ -20,9 +20,9 @@ html {
  * Remove the margin in all browsers.
  */
 
-body {
+/*body {
   margin: 0;
-}
+}*/
 
 /**
  * Render the `main` element consistently in IE.
@@ -166,10 +166,6 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
-  color: #8c4c17;
-  border-radius: 5px;
-  margin-bottom: 5%;
-  /*background-color: #c0a87c;*/
 }
 
 /**
