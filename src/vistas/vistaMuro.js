@@ -1,3 +1,4 @@
+//import { createPost } from "../lib/dataBaseService.js";
 export const muro = () => {
   const home = document.createElement("div");
 
@@ -24,6 +25,16 @@ export const muro = () => {
   const boxPrincipalMuro = document.createElement("div");
   boxPrincipalMuro.className = "boxPrincipalMuro";
   home.appendChild(boxPrincipalMuro);
+  // crear input
+  const sendPost = document.createElement("input");
+  sendPost.type = "textarea";
+  sendPost.className = "input";
+  home.appendChild(sendPost);
+
+  const sendButton = document.createElement("button");
+  sendButton.className = "btnRegister";
+  sendButton.textContent = "Enviar";
+  home.appendChild(sendButton);
 
   const post1 = document.createElement("div");
   post1.className = "post";
@@ -40,10 +51,10 @@ export const muro = () => {
   post3.textContent = "Aquí van los posteos 3";
   boxPrincipalMuro.appendChild(post3);
 
-  const post4 = document.createElement("div");
+  /*const post4 = document.createElement("div");
   post4.className = "post";
   post4.textContent = "Aquí van los posteos 4";
-  boxPrincipalMuro.appendChild(post4);
+  boxPrincipalMuro.appendChild(post4);*/
 
   return home;
 };

@@ -1,3 +1,6 @@
+import { createUser } from "../lib/authService.js";
+import { onNavigate } from "../main.js";
+
 export const register = () => {
   const registro = document.createElement("div");
 
@@ -30,6 +33,13 @@ export const register = () => {
   const btnRegister = document.createElement("button");
   btnRegister.innerHTML = "Registrate";
   btnRegister.className = "btnRegister";
+  btnRegister.addEventListener("click", function () {
+    document.getElementsByClassName = "btnRegister";
+    document.getElementById("root").innerHTML = "";
+    createUser(mail.value, password.value).then(() => {
+      onNavigate("/muro");
+    });
+  });
   Box.appendChild(btnRegister);
 
   return registro;

@@ -31,7 +31,7 @@ export const login = () => {
   const text = document.createElement("p");
   text.className = "text";
   text.innerHTML =
-    "¿Olvidaste tu contraseña? <a id = 'con'> Haz click aquí </a> <br> <a id='link' href='#register'>Crea tu cuenta</a>";
+    "¿Olvidaste tu contraseña? <a id = 'con'> Haz click aquí </a> <br> <a id='link' >Crea tu cuenta</a>";
   boxPrincipal.appendChild(text);
   boxPrincipal.querySelector("#link").addEventListener("click", () => {
     onNavigate("/register");
