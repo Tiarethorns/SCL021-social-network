@@ -44,28 +44,20 @@ export const muro = () => {
   });
   home.appendChild(sendButton);
 
-  home.appendChild(document.createElement("br"));
-  home.appendChild(document.createElement("br"));
-
-  const post1 = document.createElement("textarea");
-  post1.className = "post";
-  //post1.textContent = "Aquí van los posteos 1";
-  home.appendChild(post1);
-
-  /*const post2 = document.createElement("div");
+  const post2 = document.createElement("div");
   post2.className = "post";
-  post2.textContent = "Aquí van los posteos 2";
+  post2.textContent = "";
   boxPrincipalMuro.appendChild(post2);
 
   const post3 = document.createElement("div");
   post3.className = "post";
-  post3.textContent = "Aquí van los posteos 3";
-  boxPrincipalMuro.appendChild(post3);*/
+  post3.textContent = "";
+  boxPrincipalMuro.appendChild(post3);
 
-  /*const post4 = document.createElement("div");
+  const post4 = document.createElement("div");
   post4.className = "post";
-  post4.textContent = "Aquí van los posteos 4";
-  boxPrincipalMuro.appendChild(post4);*/
+  post4.textContent = "";
+  boxPrincipalMuro.appendChild(post4);
 
   return home;
 };
