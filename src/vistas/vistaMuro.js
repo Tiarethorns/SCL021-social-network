@@ -1,4 +1,5 @@
-//import { createPost } from "../lib/dataBaseService.js";
+import { createPost } from "../lib/dataBaseService.js";
+
 export const muro = () => {
   const home = document.createElement("div");
 
@@ -26,22 +27,32 @@ export const muro = () => {
   boxPrincipalMuro.className = "boxPrincipalMuro";
   home.appendChild(boxPrincipalMuro);
   // crear input
-  const sendPost = document.createElement("input");
-  sendPost.type = "textarea";
-  sendPost.className = "input";
+  const sendPost = document.createElement("textarea");
+  sendPost.className = "post";
   home.appendChild(sendPost);
 
+  home.appendChild(document.createElement("br"));
+  //home.appendChild(document.createElement("br"));
+
   const sendButton = document.createElement("button");
-  sendButton.className = "btnRegister";
+  sendButton.className = "sendButton";
   sendButton.textContent = "Enviar";
+  sendButton.addEventListener("click", function () {
+    document.getElementsByClassName = "sendButton";
+    document.getElementById("root").innerHTML = "";
+    createPost(sendPost.value);
+  });
   home.appendChild(sendButton);
 
-  const post1 = document.createElement("div");
-  post1.className = "post";
-  post1.textContent = "Aquí van los posteos 1";
-  boxPrincipalMuro.appendChild(post1);
+  home.appendChild(document.createElement("br"));
+  home.appendChild(document.createElement("br"));
 
-  const post2 = document.createElement("div");
+  const post1 = document.createElement("textarea");
+  post1.className = "post";
+  //post1.textContent = "Aquí van los posteos 1";
+  home.appendChild(post1);
+
+  /*const post2 = document.createElement("div");
   post2.className = "post";
   post2.textContent = "Aquí van los posteos 2";
   boxPrincipalMuro.appendChild(post2);
@@ -49,7 +60,7 @@ export const muro = () => {
   const post3 = document.createElement("div");
   post3.className = "post";
   post3.textContent = "Aquí van los posteos 3";
-  boxPrincipalMuro.appendChild(post3);
+  boxPrincipalMuro.appendChild(post3);*/
 
   /*const post4 = document.createElement("div");
   post4.className = "post";

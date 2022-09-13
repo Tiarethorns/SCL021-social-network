@@ -134,3 +134,18 @@ body {
   align-content: space-evenly;
   justify-content: space-around;
 }
+.sendButton {
+  display: flex;
+  border-radius: 15px;
+  background-color: #c0a87c;
+  height: 3em;
+  width: 35%;
+  color: #ffffb0;
+  font-weight: 500;
+  font-size: large;
+  justify-content: space-evenly;
+  align-content: stretch;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 30%;
+}
