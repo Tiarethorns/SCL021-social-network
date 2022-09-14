@@ -1,21 +1,4 @@
 import { createPost } from "../lib/dataBaseService.js";
-//dar aqui el lugar donde estaran alojados los post, usar for each
-export const showPosts = (posts) => {
-  const post2 = document.createElement("div");
-  post2.className = "post";
-  post2.textContent = "";
-  boxPrincipalMuro.appendChild(post2);
-
-  const post3 = document.createElement("div");
-  post3.className = "post";
-  post3.textContent = "";
-  boxPrincipalMuro.appendChild(post3);
-
-  const post4 = document.createElement("div");
-  post4.className = "post";
-  post4.textContent = "";
-  boxPrincipalMuro.appendChild(post4);
-};
 
 export const muro = () => {
   const home = document.createElement("div");
@@ -61,6 +44,7 @@ export const muro = () => {
 
   const boxPrincipalMuro = document.createElement("div");
   boxPrincipalMuro.className = "boxPrincipalMuro";
+  boxPrincipalMuro.id = "boxPrincipalMuro";
   home.appendChild(boxPrincipalMuro);
   // crear input
   const sendPost = document.createElement("textarea");
@@ -75,10 +59,23 @@ export const muro = () => {
   sendButton.textContent = "Enviar";
   sendButton.addEventListener("click", function () {
     document.getElementsByClassName = "sendButton";
-    document.getElementById("root").innerHTML = "";
+    /*document.getElementById("root").innerHTML = "";*/
     createPost(sendPost.value);
   });
   home.appendChild(sendButton);
 
   return home;
+};
+//dar aqui el lugar donde estaran alojados los post, usar for each
+export const showPosts = (posts) => {
+  let boxPrincipalMuro = document.getElementById("boxPrincipalMuro");
+  boxPrincipalMuro.innerHTML = "";
+  for (let post of posts) {
+    const el = document.createElement("div");
+    el.className = "post";
+    el.textContent = post.content;
+
+    console.log(post);
+    boxPrincipalMuro.appendChild(el);
+  }
 };
