@@ -1,4 +1,21 @@
 import { createPost } from "../lib/dataBaseService.js";
+//dar aqui el lugar donde estaran alojados los post, usar for each
+export const showPosts = (posts) => {
+  const post2 = document.createElement("div");
+  post2.className = "post";
+  post2.textContent = "";
+  boxPrincipalMuro.appendChild(post2);
+
+  const post3 = document.createElement("div");
+  post3.className = "post";
+  post3.textContent = "";
+  boxPrincipalMuro.appendChild(post3);
+
+  const post4 = document.createElement("div");
+  post4.className = "post";
+  post4.textContent = "";
+  boxPrincipalMuro.appendChild(post4);
+};
 
 export const muro = () => {
   const home = document.createElement("div");
@@ -23,12 +40,31 @@ export const muro = () => {
   posteo.className = "icono";
   iconosBarra.appendChild(posteo);
 
+  const textoBarra = document.createElement("div");
+  textoBarra.className = "textoBarra";
+  home.appendChild(textoBarra);
+
+  const biblioteca = document.createElement("p");
+  biblioteca.textContent = "Biblioteca";
+  biblioteca.className = "text";
+  textoBarra.appendChild(biblioteca);
+
+  const muroSaco = document.createElement("p");
+  muroSaco.textContent = "Muro";
+  muroSaco.className = "text";
+  textoBarra.appendChild(muroSaco);
+
+  const postea = document.createElement("p");
+  postea.textContent = "Muro";
+  postea.className = "text";
+  textoBarra.appendChild(postea);
+
   const boxPrincipalMuro = document.createElement("div");
   boxPrincipalMuro.className = "boxPrincipalMuro";
   home.appendChild(boxPrincipalMuro);
   // crear input
   const sendPost = document.createElement("textarea");
-  sendPost.className = "post";
+  sendPost.className = "sendPost";
   home.appendChild(sendPost);
 
   home.appendChild(document.createElement("br"));
@@ -43,21 +79,6 @@ export const muro = () => {
     createPost(sendPost.value);
   });
   home.appendChild(sendButton);
-
-  const post2 = document.createElement("div");
-  post2.className = "post";
-  post2.textContent = "";
-  boxPrincipalMuro.appendChild(post2);
-
-  const post3 = document.createElement("div");
-  post3.className = "post";
-  post3.textContent = "";
-  boxPrincipalMuro.appendChild(post3);
-
-  const post4 = document.createElement("div");
-  post4.className = "post";
-  post4.textContent = "";
-  boxPrincipalMuro.appendChild(post4);
 
   return home;
 };

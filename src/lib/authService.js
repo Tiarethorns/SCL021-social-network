@@ -3,7 +3,8 @@ import { onNavigate } from "../main.js";
 import {
   signInWithPopup,
   GoogleAuthProvider,
-  createUserWithEmailAndPassword, // crear funcion y luego pegar funcion desde firebase
+  createUserWithEmailAndPassword,
+  // crear funcion y luego pegar funcion desde firebase
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
 
 const provider = new GoogleAuthProvider();
