@@ -71,9 +71,10 @@ export const showPosts = (posts) => {
   let boxPrincipalMuro = document.getElementById("boxPrincipalMuro");
   boxPrincipalMuro.innerHTML = "";
   for (let post of posts) {
+    console.log(post);
     const el = document.createElement("div");
     el.className = "post";
-    el.textContent = post.content;
+    el.textContent = post.content + post.autor;
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);

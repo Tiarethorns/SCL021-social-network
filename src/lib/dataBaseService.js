@@ -1,4 +1,4 @@
-import { db } from "./firebaseConfig.js";
+import { db, auth } from "./firebaseConfig.js";
 import {
   collection,
   addDoc,
@@ -7,10 +7,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
 import { showPosts } from "../vistas/vistaMuro.js";
 async function createPost(texto) {
+  console.log("verificar el user", auth.currentUser.email);
+  let fecha = new Date();
   await addDoc(collection(db, "post"), {
     content: texto,
-    fecha: "",
-    autor: "",
+    fecha: fecha.getTime(),
+    autor: auth.currentUser.email,
     likes: [],
   });
 }
