@@ -38,7 +38,7 @@ export const muro = () => {
   textoBarra.appendChild(muroSaco);
 
   const postea = document.createElement("p");
-  postea.textContent = "Muro";
+  postea.textContent = "Postea";
   postea.className = "text";
   textoBarra.appendChild(postea);
 
@@ -74,7 +74,7 @@ export const showPosts = (posts) => {
     console.log(post);
     const el = document.createElement("div");
     el.className = "post";
-    el.textContent = post.content + post.autor + post.fecha;
+    el.textContent = post.content + " " + " " + post.autor + " " + post.fecha;
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);

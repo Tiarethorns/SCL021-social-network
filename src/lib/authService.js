@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
   // crear funcion y luego pegar funcion desde firebase
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
 
@@ -50,7 +51,7 @@ export const createUser = (email, password) =>
     });
 // email and password
 /*const auth = getAuth();*/
-export const singIn = (email, password) => {
+export const signIn = (email, password) => {
   console.log({ email, password });
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -64,4 +65,8 @@ export const singIn = (email, password) => {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
+};
+//recuperar contraseña
+export const recuperarCon = (email) => {
+  return sendPasswordResetEmail(auth, email);
 };

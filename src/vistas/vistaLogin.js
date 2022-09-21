@@ -1,5 +1,5 @@
 import { loginWithGoogle } from "../lib/authService.js";
-import { singIn } from "../lib/authService.js";
+import { signIn } from "../lib/authService.js";
 import { onNavigate } from "../main.js";
 
 export const login = () => {
@@ -27,7 +27,7 @@ export const login = () => {
   btnLog.className = "btn-log";
   btnLog.innerText = "Log In";
   btnLog.addEventListener("click", () => {
-    singIn(inputUser.value, inputPassword.value).then(() => {
+    signIn(inputUser.value, inputPassword.value).then(() => {
       onNavigate("/muro");
     });
   });
