@@ -4,6 +4,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   // crear funcion y luego pegar funcion desde firebase
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
 
@@ -47,3 +48,20 @@ export const createUser = (email, password) =>
       const errorMessage = error.message;
       console.log(errorMessage);
     });
+// email and password
+/*const auth = getAuth();*/
+export const singIn = (email, password) => {
+  console.log({ email, password });
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      onNavigate("/muro");
+      // ...
+    })
+    .catch((error) => {
+      console.log(error);
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+};

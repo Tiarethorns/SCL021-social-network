@@ -1,4 +1,5 @@
 import { loginWithGoogle } from "../lib/authService.js";
+import { singIn } from "../lib/authService.js";
 import { onNavigate } from "../main.js";
 
 export const login = () => {
@@ -11,11 +12,13 @@ export const login = () => {
 
   const inputUser = document.createElement("input");
   inputUser.className = "input";
+  inputUser.id = "email";
   inputUser.setAttribute("placeholder", "Username");
   boxPrincipal.appendChild(inputUser);
 
   const inputPassword = document.createElement("input");
   inputPassword.className = "input";
+  inputPassword.id = "password";
   inputPassword.setAttribute("placeholder", "Password");
   inputPassword.type = "password";
   boxPrincipal.appendChild(inputPassword);
@@ -24,8 +27,11 @@ export const login = () => {
   btnLog.className = "btn-log";
   btnLog.innerText = "Log In";
   btnLog.addEventListener("click", () => {
-    onNavigate("/muro");
+    singIn(inputUser.value, inputPassword.value).then(() => {
+      onNavigate("/muro");
+    });
   });
+
   boxPrincipal.appendChild(btnLog);
 
   const text = document.createElement("p");

@@ -74,7 +74,7 @@ export const showPosts = (posts) => {
     console.log(post);
     const el = document.createElement("div");
     el.className = "post";
-    el.textContent = post.content + post.autor;
+    el.textContent = post.content + post.autor + post.fecha;
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);
