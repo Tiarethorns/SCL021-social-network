@@ -112,6 +112,10 @@ body {
   justify-content: space-between;
   margin-top: 75%;
 }
+.icono {
+  height: 50px;
+  width: 50px;
+}
 .boxPrincipalMuro {
   /* box-shadow: 10px 10px 8px #888888; */
   row-gap: 15px;
@@ -128,9 +132,9 @@ body {
   display: flex;
   align-items: center;
   border-radius: 15px;
-  background-color: #c0a87c28;
+  background-color: #f1efea28;
   width: 100%;
-  height: 8em;
+  height: 4em;
   align-content: space-evenly;
   justify-content: space-around;
   border: solid #bf6c0d;
@@ -162,8 +166,12 @@ body {
   border-radius: 15px;
   background-color: #c0a87cd5;
   width: 100%;
-  height: 4em;
+  height: 5em;
   align-content: space-evenly;
   justify-content: space-around;
   border: solid #bf6c0d;
+}
+.likeGrain {
+  height: 35px;
+  width: 35px;
 }
