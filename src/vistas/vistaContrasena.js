@@ -33,7 +33,7 @@ export const contrasena = () => {
     recuperarCon(inputPassword.value)
       .then(() => {
         alert("Se envió un correo de recuperación de clave");
-        onNavigate("/login");
+        onNavigate("/");
       })
       .catch((error) => {
         console.log(error);

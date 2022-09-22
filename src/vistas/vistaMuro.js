@@ -67,6 +67,12 @@ export const muro = () => {
   return home;
 };
 //dar aqui el lugar donde estaran alojados los post, usar for each
+let options = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
 export const showPosts = (posts) => {
   let boxPrincipalMuro = document.getElementById("boxPrincipalMuro");
   boxPrincipalMuro.innerHTML = "";
@@ -74,7 +80,8 @@ export const showPosts = (posts) => {
     console.log(post);
     const el = document.createElement("div");
     el.className = "post";
-    el.textContent = post.content + " " + " " + post.autor + " " + post.fecha;
+    const date = new Date(post.fecha).toLocaleDateString("es", options);
+    el.textContent = post.content + " " + " " + post.autor + " " + date;
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);
