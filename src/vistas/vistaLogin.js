@@ -1,6 +1,7 @@
 import { loginWithGoogle } from "../lib/authService.js";
 import { signIn } from "../lib/authService.js";
 import { onNavigate } from "../main.js";
+/*import { observador } from "../lib/authService.js";*/
 
 export const login = () => {
   const logearse = document.createElement("div");
@@ -29,6 +30,7 @@ export const login = () => {
   btnLog.addEventListener("click", () => {
     signIn(inputUser.value, inputPassword.value).then(() => {
       onNavigate("/muro");
+      /* observador();*/
     });
   });
 
@@ -51,7 +53,9 @@ export const login = () => {
   btngoogle.innerHTML = "Ingresa con tu cuenta de Google";
   btngoogle.addEventListener("click", () => {
     loginWithGoogle();
+    /*observador();*/
   });
+  /*sesionActiva();*/
   logearse.appendChild(btngoogle);
 
   const imgGgle = document.createElement("img");

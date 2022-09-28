@@ -1,4 +1,7 @@
-import { createPost } from "../lib/dataBaseService.js";
+import { createPost, updateLikes } from "../lib/dataBaseService.js";
+/*import { updateLikes } from "../lib/dataBaseService.js";*/
+import { onNavigate } from "../main.js";
+import { logOut } from "../lib/authService.js";
 
 export const muro = () => {
   const home = document.createElement("div");
@@ -21,6 +24,11 @@ export const muro = () => {
   const posteo = document.createElement("img");
   posteo.src = "./img/posteo.png";
   posteo.className = "icono";
+  posteo.id = "LogOut";
+  posteo.addEventListener("click", function () {
+    document.getElementsById = "LogOut";
+    logOut();
+  });
   iconosBarra.appendChild(posteo);
 
   const textoBarra = document.createElement("div");
@@ -81,12 +89,22 @@ export const showPosts = (posts) => {
     const el = document.createElement("div");
     el.className = "post";
     const date = new Date(post.fecha).toLocaleDateString("es", options);
-    el.textContent = post.content + " " + " " + post.autor + " " + date;
+    el.textContent = post.autor + " " + " " + post.content + " " + date;
 
     const likeGrain = document.createElement("img");
     likeGrain.className = "likeGrain";
     likeGrain.src = "./img/cgrain.png";
+    likeGrain.dataset.id = post.id;
+    likeGrain.addEventListener("click", (e) => {
+      updateLikes(e.target.dataset.id, post.likes);
+    });
+    likeGrain.innerHTML = post.likes.length;
     el.appendChild(likeGrain);
+
+    /*const likeNums = create.createElement("p");
+    likeNums.className = "Likes";
+    likeGrain.textContent = likes + " " + auth.currentUser.email;
+    el.appendChild(likeNums);*/
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);

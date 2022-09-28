@@ -6,6 +6,9 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
+  getAuth,
+  signOut,
+
   // crear funcion y luego pegar funcion desde firebase
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
 
@@ -69,4 +72,37 @@ export const signIn = (email, password) => {
 //recuperar contraseña
 export const recuperarCon = (email) => {
   return sendPasswordResetEmail(auth, email);
+};
+
+//sesionActiva
+const observator = () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (user) {
+    onNavigate = "/muro";
+    console.log("existe usuario activo");
+    const uid = user.uid;
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    // ...
+  } else {
+    // No user is signed in.
+    onNavigate = "/";
+    console.log("no existe usuario activo");
+    // ...
+  }
+};
+
+//Finalizar sesión
+export const logOut = () => {
+  signOut(auth)
+    .then(() => {
+      onNavigate("/");
+      console.log("Saliendo...");
+    })
+    .catch((error) => {
+      console.log(error);
+      // An error happened.
+    });
 };
