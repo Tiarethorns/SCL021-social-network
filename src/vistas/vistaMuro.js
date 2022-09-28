@@ -94,17 +94,16 @@ export const showPosts = (posts) => {
     const likeGrain = document.createElement("img");
     likeGrain.className = "likeGrain";
     likeGrain.src = "./img/cgrain.png";
-    likeGrain.dataset.id = post.id;
-    likeGrain.addEventListener("click", (e) => {
-      updateLikes(e.target.dataset.id, post.likes);
+    likeGrain.addEventListener("click", (event) => {
+      updateLikes(post.id, post.autor);
     });
-    likeGrain.innerHTML = post.likes.length;
+    console.log(updateLikes(post.id, post.autor));
     el.appendChild(likeGrain);
 
-    /*const likeNums = create.createElement("p");
-    likeNums.className = "Likes";
-    likeGrain.textContent = likes + " " + auth.currentUser.email;
-    el.appendChild(likeNums);*/
+    const likeCount = document.createElement("p");
+    likeCount.id = "likeCount";
+    likeCount.innerHTML = updateLikes();
+    el.appendChild(likeCount);
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);

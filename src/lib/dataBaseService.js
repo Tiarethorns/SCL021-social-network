@@ -34,22 +34,10 @@ const bajarPosts = () => {
 };
 bajarPosts();
 
-//crear función update con id
-
-/*async function updateLikesF(id, actualLikes) {
-  debria recibir un post
-  await updateDoc(collection(db, "post", id), { // deberia ser el post
-   
-  });
-}*/
-
-let likesSum = 0;
-function updateLikes(post, likes) {
-  likesSum += 1;
-  /*if (correo esxiste en post.likes)
-    guardar el nuevo correo en post.likes
-    /mandar actualizar el post emn firebase == updateLikesF(post)**/
-  console.log("la cantidad de likes es ", likes, auth.currentUser.email);
+let likeCount = 0;
+function updateLikes(post, id, autor) {
+  likeCount++;
+  console.log("la cantidad de likes es ", likeCount, auth.currentUser.email);
 }
 
 export { createPost };
