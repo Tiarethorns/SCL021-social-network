@@ -1,5 +1,4 @@
 import { createPost, updateLikes } from "../lib/dataBaseService.js";
-/*import { updateLikes } from "../lib/dataBaseService.js";*/
 import { onNavigate } from "../main.js";
 import { logOut } from "../lib/authService.js";
 
@@ -35,21 +34,6 @@ export const muro = () => {
   textoBarra.className = "textoBarra";
   home.appendChild(textoBarra);
 
-  /*const biblioteca = document.createElement("p");
-  biblioteca.textContent = "Biblioteca";
-  biblioteca.className = "text";
-  textoBarra.appendChild(biblioteca);
-
-  const muroSaco = document.createElement("p");
-  muroSaco.textContent = "Muro";
-  muroSaco.className = "text";
-  textoBarra.appendChild(muroSaco);
-
-  const postea = document.createElement("p");
-  postea.textContent = "Postea";
-  postea.className = "text";
-  textoBarra.appendChild(postea);*/
-
   const boxPrincipalMuro = document.createElement("div");
   boxPrincipalMuro.className = "boxPrincipalMuro";
   boxPrincipalMuro.id = "boxPrincipalMuro";
@@ -74,7 +58,7 @@ export const muro = () => {
 
   return home;
 };
-//dar aqui el lugar donde estaran alojados los post, usar for each
+
 let options = {
   year: "numeric",
   month: "numeric",
@@ -88,22 +72,25 @@ export const showPosts = (posts) => {
     console.log(post);
     const el = document.createElement("div");
     el.className = "post";
+    let likes = 0;
     const date = new Date(post.fecha).toLocaleDateString("es", options);
     el.textContent = post.autor + " " + " " + post.content + " " + date;
+
+    const likeCount = document.createElement("p");
+    likeCount.id = "likeCount";
+    el.appendChild(likeCount);
 
     const likeGrain = document.createElement("img");
     likeGrain.className = "likeGrain";
     likeGrain.src = "./img/cgrain.png";
     likeGrain.addEventListener("click", (event) => {
-      updateLikes(post.id, post.autor);
+      /*updateLikes(post.id, post.autor);*/
+      likes++;
+      likeCount.innerHTML = likes;
+      console.log(likes);
     });
-    console.log(updateLikes(post.id, post.autor));
-    el.appendChild(likeGrain);
 
-    const likeCount = document.createElement("p");
-    likeCount.id = "likeCount";
-    likeCount.innerHTML = updateLikes();
-    el.appendChild(likeCount);
+    el.appendChild(likeGrain);
 
     console.log(post);
     boxPrincipalMuro.appendChild(el);

@@ -34,11 +34,5 @@ const bajarPosts = () => {
 };
 bajarPosts();
 
-let likeCount = 0;
-function updateLikes(post, id, autor) {
-  likeCount++;
-  console.log("la cantidad de likes es ", likeCount, auth.currentUser.email);
-}
-
 export { createPost };
 export { updateLikes };
